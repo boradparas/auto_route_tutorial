@@ -1,16 +1,18 @@
-# auto_router_tutorial
+## auto_route tutorial
 
-A new Flutter project.
+### Installation
 
-## Getting Started
+```
+dependencies:
+  auto_route: ^0.6.7
 
-This project is a starting point for a Flutter application.
+dev_dependencies:
+  auto_route_generator: ^0.6.8
+  build_runner:
+```
 
-A few resources to get you started if this is your first Flutter project:
+Use ```flutter pub run build_runner watch --delete-conflicting-outputs``` to alter generated file on save.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Resources
+- [Go to written tutorial](https://medium.com/@boradparas)
+- [auto_route package](https://pub.dev/packages/auto_route)
