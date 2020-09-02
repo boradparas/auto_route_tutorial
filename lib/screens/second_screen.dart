@@ -15,7 +15,7 @@ class SecondScreen extends StatelessWidget {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Third Screen"),
+          title: Text("Second Screen"),
         ),
         body: SafeArea(
           child: Center(

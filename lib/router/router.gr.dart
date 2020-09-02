@@ -12,15 +12,18 @@ import 'package:flutter/material.dart';
 import '../screens/first_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/second_screen.dart';
+import '../screens/third_screen.dart';
 
 class Routes {
   static const String homeScreen = '/';
   static const String firstScreen = '/first-screen';
   static const String secondScreen = '/second-screen';
+  static const String thirdScreen = '/third-screen';
   static const all = <String>{
     homeScreen,
     firstScreen,
     secondScreen,
+    thirdScreen,
   };
 }
 
@@ -31,6 +34,7 @@ class Router extends RouterBase {
     RouteDef(Routes.homeScreen, page: HomeScreen),
     RouteDef(Routes.firstScreen, page: FirstScreen),
     RouteDef(Routes.secondScreen, page: SecondScreen),
+    RouteDef(Routes.thirdScreen, page: ThirdScreen),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -60,6 +64,13 @@ class Router extends RouterBase {
           num: args.num,
         ),
         settings: data,
+      );
+    },
+    ThirdScreen: (data) {
+      return buildAdaptivePageRoute<dynamic>(
+        builder: (context) => const ThirdScreen(),
+        settings: data,
+        fullscreenDialog: true,
       );
     },
   };
