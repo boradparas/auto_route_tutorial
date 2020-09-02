@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FlatButton(
-                  color: Colors.redAccent,
+                  color: Colors.deepPurple,
                   onPressed: _navigateToFirstScreen,
                   child: Text("First Screen"),
                 ),
@@ -32,6 +32,11 @@ class HomeScreen extends StatelessWidget {
                   onPressed: _navigateToThirdScreen,
                   child: Text("Third Screen"),
                 ),
+                FlatButton(
+                  color: Colors.redAccent,
+                  onPressed: _navigateToErrorScreen,
+                  child: Text("Error Screen"),
+                ),
               ],
             ),
           ),
@@ -43,7 +48,6 @@ class HomeScreen extends StatelessWidget {
   _navigateToFirstScreen() {
     ExtendedNavigator.root.push(
       Routes.firstScreen,
-      // Try route which does not exist and you will see error screen which auto_route package provides
       arguments: FirstScreenArguments(
         info: "Hello",
       ),
@@ -58,8 +62,13 @@ class HomeScreen extends StatelessWidget {
   }
 
   _navigateToThirdScreen() {
+    // Navigate without arguments
     ExtendedNavigator.root.push(
       Routes.thirdScreen,
     );
+  }
+
+  _navigateToErrorScreen() {
+    ExtendedNavigator.root.push("pizza-on-pineapple");
   }
 }
