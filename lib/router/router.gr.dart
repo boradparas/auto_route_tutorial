@@ -68,7 +68,7 @@ class Router extends RouterBase {
     },
     ThirdScreen: (data) {
       return buildAdaptivePageRoute<dynamic>(
-        builder: (context) => const ThirdScreen(),
+        builder: (context) => ThirdScreen(),
         settings: data,
         fullscreenDialog: true,
       );
