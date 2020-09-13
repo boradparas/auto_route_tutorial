@@ -57,7 +57,10 @@ class HomeScreen extends StatelessWidget {
   _navigateToSecondScreen() {
     ExtendedNavigator.root.push(
       Routes.secondScreen,
-      arguments: SecondScreenArguments(info: "ABC", num: 111),
+      arguments: SecondScreenArguments(
+        info: "ABC",
+        num: 111,
+      ),
     );
   }
 

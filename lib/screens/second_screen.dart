@@ -20,6 +20,7 @@ class SecondScreen extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Info : $info"),
                 Text("Num : $num"),
