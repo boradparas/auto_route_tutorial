@@ -2,7 +2,7 @@
 
 ### Installation
 
-```
+```yaml
 dependencies:
   auto_route: ^0.6.7
 
